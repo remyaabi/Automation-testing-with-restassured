@@ -33,7 +33,7 @@ public class TwitterApiTest extends TestBase {
             try {
                Account  account = objectMapper.readValue(response.getBody().asString(), Account.class);
                 System.out.println("account.getScreenName(): " + account.getScreenName());
-                Assert.assertEquals(screenNameExpected, account.getScreenName());
+                Assert.assertEquals(account.getScreenName(), screenNameExpected);
             } catch (IOException e) {
                 e.printStackTrace();
                 Assert.fail("Error thrown: " + e.getMessage());
@@ -44,15 +44,15 @@ public class TwitterApiTest extends TestBase {
     @Test
     public void getVerifyaccountCredentials() {
         String screenNameExpected = "brightcorona";
-        String nameExpected = "Remya";
+        String nameExpected = "Remya Jacob";
         response = given().auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).when()
                 .get(EndpointUrl.VERIFY_ACCOUNTSETTING.getResourcePath()).then().assertThat().statusCode(200).extract().response();
         System.out.println("getVerifyaccountCredentials :" + response.asString());
 
             try {
                 VerifyAccount verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
-                Assert.assertEquals(screenNameExpected, verifyAccount.getScreenName());
-                Assert.assertEquals(nameExpected, verifyAccount.getName());
+                Assert.assertEquals( verifyAccount.getScreenName(),screenNameExpected);
+                Assert.assertEquals(verifyAccount.getName(), nameExpected);
             } catch (IOException e) {
                 e.printStackTrace();
                 Assert.fail("Error thrown: " + e.getMessage());
@@ -71,7 +71,7 @@ public class TwitterApiTest extends TestBase {
         System.out.println("response : " + response.asString());
         try {
             VerifyAccount verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
-            Assert.assertEquals("es", verifyAccount.getLang());
+            Assert.assertEquals( verifyAccount.getLang(),"es");
 
             response = given().param("lang", "en").auth()
                     .oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).when().post(EndpointUrl.POST_ACCOUNTSETTING.getResourcePath())
