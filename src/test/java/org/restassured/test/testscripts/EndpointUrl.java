@@ -1,9 +1,12 @@
 package org.restassured.test.testscripts;
 
 public enum EndpointUrl {
-	GET_ACCOUNTSETTING("/1.1/account/settings.json"), VERIFY_ACCOUNTSETTING(
-			"/1.1/account/verify_credentials.json"), POST_ACCOUNTSETTING(
-					"1.1/account/settings.json"), GET_FINDGEOLOCATION("1.1/geo/reverse_geocode.json");
+	GET_ACCOUNTSETTING("/1.1/account/settings.json"),
+	VERIFY_ACCOUNTSETTING("/1.1/account/verify_credentials.json"),
+	POST_ACCOUNTSETTING("1.1/account/settings.json"),
+	GET_FINDGEOLOCATION("1.1/geo/reverse_geocode.json"),
+	POST_STATUS("1.1/statuses/update.json"),
+	GET_STATUS("1.1/statuses/show.json");
 	String resourcePath;
 
 	EndpointUrl(String resourcePath) {

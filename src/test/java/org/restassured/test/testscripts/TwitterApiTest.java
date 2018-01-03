@@ -3,6 +3,7 @@ package org.restassured.test.testscripts;
 import static io.restassured.RestAssured.given;
 import java.io.IOException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import io.restassured.http.ContentType;
 import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -51,7 +52,7 @@ public class TwitterApiTest extends TestBase {
 
             try {
                 VerifyAccount verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
-                Assert.assertEquals( verifyAccount.getScreenName(),screenNameExpected);
+                Assert.assertEquals(verifyAccount.getScreenName(), screenNameExpected);
                 Assert.assertEquals(verifyAccount.getName(), nameExpected);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -102,4 +103,5 @@ public class TwitterApiTest extends TestBase {
         JSONObject country = places.getJSONObject(2);
         Assert.assertTrue(country.get("name").equals("United States"));
     }
+
 }

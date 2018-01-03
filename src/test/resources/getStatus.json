@@ -1,0 +1,682 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "$id": "/properties/created_at",
+      "type": "string",
+      "title": "The Created_at Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Wed Jan 03 02:53:38 +0000 2018"
+      ]
+    },
+    "id": {
+      "$id": "/properties/id",
+      "type": "integer",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        948386845406019600
+      ]
+    },
+    "id_str": {
+      "$id": "/properties/id_str",
+      "type": "string",
+      "title": "The Id_str Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "948386845406019584"
+      ]
+    },
+    "text": {
+      "$id": "/properties/text",
+      "type": "string",
+      "title": "The Text Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Status update through rest assured1514948020023"
+      ]
+    },
+    "truncated": {
+      "$id": "/properties/truncated",
+      "type": "boolean",
+      "title": "The Truncated Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "entities": {
+      "$id": "/properties/entities",
+      "type": "object",
+      "properties": {
+        "hashtags": {
+          "$id": "/properties/entities/properties/hashtags",
+          "type": "array",
+          "items": {
+            "title": "Empty Object",
+            "description": "Accepts anything iff it's valid JSON."
+          }
+        },
+        "symbols": {
+          "$id": "/properties/entities/properties/symbols",
+          "type": "array",
+          "items": {
+            "title": "Empty Object",
+            "description": "Accepts anything iff it's valid JSON."
+          }
+        },
+        "user_mentions": {
+          "$id": "/properties/entities/properties/user_mentions",
+          "type": "array",
+          "items": {
+            "title": "Empty Object",
+            "description": "Accepts anything iff it's valid JSON."
+          }
+        },
+        "urls": {
+          "$id": "/properties/entities/properties/urls",
+          "type": "array",
+          "items": {
+            "title": "Empty Object",
+            "description": "Accepts anything iff it's valid JSON."
+          }
+        }
+      }
+    },
+    "source": {
+      "$id": "/properties/source",
+      "type": "string",
+      "title": "The Source Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "<a href=\"https://apps.twitter.com/app/14500288\" rel=\"nofollow\">twittersamplepro</a>"
+      ]
+    },
+    "in_reply_to_status_id": {
+      "$id": "/properties/in_reply_to_status_id",
+      "type": "null",
+      "title": "The In_reply_to_status_id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "in_reply_to_status_id_str": {
+      "$id": "/properties/in_reply_to_status_id_str",
+      "type": "null",
+      "title": "The In_reply_to_status_id_str Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "in_reply_to_user_id": {
+      "$id": "/properties/in_reply_to_user_id",
+      "type": "null",
+      "title": "The In_reply_to_user_id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "in_reply_to_user_id_str": {
+      "$id": "/properties/in_reply_to_user_id_str",
+      "type": "null",
+      "title": "The In_reply_to_user_id_str Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "in_reply_to_screen_name": {
+      "$id": "/properties/in_reply_to_screen_name",
+      "type": "null",
+      "title": "The In_reply_to_screen_name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "user": {
+      "$id": "/properties/user",
+      "type": "object",
+      "properties": {
+        "id": {
+          "$id": "/properties/user/properties/id",
+          "type": "integer",
+          "title": "The Id Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            795105456121212900
+          ]
+        },
+        "id_str": {
+          "$id": "/properties/user/properties/id_str",
+          "type": "string",
+          "title": "The Id_str Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "795105456121212929"
+          ]
+        },
+        "name": {
+          "$id": "/properties/user/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Remya Jacob"
+          ]
+        },
+        "screen_name": {
+          "$id": "/properties/user/properties/screen_name",
+          "type": "string",
+          "title": "The Screen_name Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "brightcorona"
+          ]
+        },
+        "location": {
+          "$id": "/properties/user/properties/location",
+          "type": "string",
+          "title": "The Location Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "description": {
+          "$id": "/properties/user/properties/description",
+          "type": "string",
+          "title": "The Description Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            ""
+          ]
+        },
+        "url": {
+          "$id": "/properties/user/properties/url",
+          "type": "null",
+          "title": "The Url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "entities": {
+          "$id": "/properties/user/properties/entities",
+          "type": "object",
+          "properties": {
+            "description": {
+              "$id": "/properties/user/properties/entities/properties/description",
+              "type": "object",
+              "properties": {
+                "urls": {
+                  "$id": "/properties/user/properties/entities/properties/description/properties/urls",
+                  "type": "array",
+                  "items": {
+                    "title": "Empty Object",
+                    "description": "Accepts anything iff it's valid JSON."
+                  }
+                }
+              }
+            }
+          }
+        },
+        "protected": {
+          "$id": "/properties/user/properties/protected",
+          "type": "boolean",
+          "title": "The Protected Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "followers_count": {
+          "$id": "/properties/user/properties/followers_count",
+          "type": "integer",
+          "title": "The Followers_count Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            4
+          ]
+        },
+        "friends_count": {
+          "$id": "/properties/user/properties/friends_count",
+          "type": "integer",
+          "title": "The Friends_count Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            34
+          ]
+        },
+        "listed_count": {
+          "$id": "/properties/user/properties/listed_count",
+          "type": "integer",
+          "title": "The Listed_count Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "created_at": {
+          "$id": "/properties/user/properties/created_at",
+          "type": "string",
+          "title": "The Created_at Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Sun Nov 06 03:28:07 +0000 2016"
+          ]
+        },
+        "favourites_count": {
+          "$id": "/properties/user/properties/favourites_count",
+          "type": "integer",
+          "title": "The Favourites_count Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "utc_offset": {
+          "$id": "/properties/user/properties/utc_offset",
+          "type": "null",
+          "title": "The Utc_offset Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "time_zone": {
+          "$id": "/properties/user/properties/time_zone",
+          "type": "null",
+          "title": "The Time_zone Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "geo_enabled": {
+          "$id": "/properties/user/properties/geo_enabled",
+          "type": "boolean",
+          "title": "The Geo_enabled Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "verified": {
+          "$id": "/properties/user/properties/verified",
+          "type": "boolean",
+          "title": "The Verified Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "statuses_count": {
+          "$id": "/properties/user/properties/statuses_count",
+          "type": "integer",
+          "title": "The Statuses_count Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            7
+          ]
+        },
+        "lang": {
+          "$id": "/properties/user/properties/lang",
+          "type": "string",
+          "title": "The Lang Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "en"
+          ]
+        },
+        "contributors_enabled": {
+          "$id": "/properties/user/properties/contributors_enabled",
+          "type": "boolean",
+          "title": "The Contributors_enabled Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "is_translator": {
+          "$id": "/properties/user/properties/is_translator",
+          "type": "boolean",
+          "title": "The Is_translator Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "is_translation_enabled": {
+          "$id": "/properties/user/properties/is_translation_enabled",
+          "type": "boolean",
+          "title": "The Is_translation_enabled Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "profile_background_color": {
+          "$id": "/properties/user/properties/profile_background_color",
+          "type": "string",
+          "title": "The Profile_background_color Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "F5F8FA"
+          ]
+        },
+        "profile_background_image_url": {
+          "$id": "/properties/user/properties/profile_background_image_url",
+          "type": "null",
+          "title": "The Profile_background_image_url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "profile_background_image_url_https": {
+          "$id": "/properties/user/properties/profile_background_image_url_https",
+          "type": "null",
+          "title": "The Profile_background_image_url_https Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "profile_background_tile": {
+          "$id": "/properties/user/properties/profile_background_tile",
+          "type": "boolean",
+          "title": "The Profile_background_tile Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "profile_image_url": {
+          "$id": "/properties/user/properties/profile_image_url",
+          "type": "string",
+          "title": "The Profile_image_url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "http://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+          ]
+        },
+        "profile_image_url_https": {
+          "$id": "/properties/user/properties/profile_image_url_https",
+          "type": "string",
+          "title": "The Profile_image_url_https Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png"
+          ]
+        },
+        "profile_link_color": {
+          "$id": "/properties/user/properties/profile_link_color",
+          "type": "string",
+          "title": "The Profile_link_color Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "1DA1F2"
+          ]
+        },
+        "profile_sidebar_border_color": {
+          "$id": "/properties/user/properties/profile_sidebar_border_color",
+          "type": "string",
+          "title": "The Profile_sidebar_border_color Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "C0DEED"
+          ]
+        },
+        "profile_sidebar_fill_color": {
+          "$id": "/properties/user/properties/profile_sidebar_fill_color",
+          "type": "string",
+          "title": "The Profile_sidebar_fill_color Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "DDEEF6"
+          ]
+        },
+        "profile_text_color": {
+          "$id": "/properties/user/properties/profile_text_color",
+          "type": "string",
+          "title": "The Profile_text_color Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "333333"
+          ]
+        },
+        "profile_use_background_image": {
+          "$id": "/properties/user/properties/profile_use_background_image",
+          "type": "boolean",
+          "title": "The Profile_use_background_image Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "has_extended_profile": {
+          "$id": "/properties/user/properties/has_extended_profile",
+          "type": "boolean",
+          "title": "The Has_extended_profile Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "default_profile": {
+          "$id": "/properties/user/properties/default_profile",
+          "type": "boolean",
+          "title": "The Default_profile Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "default_profile_image": {
+          "$id": "/properties/user/properties/default_profile_image",
+          "type": "boolean",
+          "title": "The Default_profile_image Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "following": {
+          "$id": "/properties/user/properties/following",
+          "type": "boolean",
+          "title": "The Following Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "follow_request_sent": {
+          "$id": "/properties/user/properties/follow_request_sent",
+          "type": "boolean",
+          "title": "The Follow_request_sent Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "notifications": {
+          "$id": "/properties/user/properties/notifications",
+          "type": "boolean",
+          "title": "The Notifications Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "translator_type": {
+          "$id": "/properties/user/properties/translator_type",
+          "type": "string",
+          "title": "The Translator_type Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "none"
+          ]
+        }
+      }
+    },
+    "geo": {
+      "$id": "/properties/geo",
+      "type": "null",
+      "title": "The Geo Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "coordinates": {
+      "$id": "/properties/coordinates",
+      "type": "null",
+      "title": "The Coordinates Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "place": {
+      "$id": "/properties/place",
+      "type": "null",
+      "title": "The Place Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "contributors": {
+      "$id": "/properties/contributors",
+      "type": "null",
+      "title": "The Contributors Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "is_quote_status": {
+      "$id": "/properties/is_quote_status",
+      "type": "boolean",
+      "title": "The Is_quote_status Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "retweet_count": {
+      "$id": "/properties/retweet_count",
+      "type": "integer",
+      "title": "The Retweet_count Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "favorite_count": {
+      "$id": "/properties/favorite_count",
+      "type": "integer",
+      "title": "The Favorite_count Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "favorited": {
+      "$id": "/properties/favorited",
+      "type": "boolean",
+      "title": "The Favorited Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "retweeted": {
+      "$id": "/properties/retweeted",
+      "type": "boolean",
+      "title": "The Retweeted Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "lang": {
+      "$id": "/properties/lang",
+      "type": "string",
+      "title": "The Lang Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "en"
+      ]
+    }
+  }
+}
