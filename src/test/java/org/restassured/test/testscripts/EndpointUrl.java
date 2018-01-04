@@ -6,7 +6,8 @@ public enum EndpointUrl {
 	POST_ACCOUNTSETTING("1.1/account/settings.json"),
 	GET_FINDGEOLOCATION("1.1/geo/reverse_geocode.json"),
 	POST_STATUS("1.1/statuses/update.json"),
-	GET_STATUS("1.1/statuses/show.json");
+	GET_STATUS("1.1/statuses/show.json"),
+	GET_RECENTTWEETS("1.1/favorites/list.json");
 	String resourcePath;
 
 	EndpointUrl(String resourcePath) {
