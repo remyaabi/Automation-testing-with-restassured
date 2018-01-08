@@ -8,6 +8,7 @@ import org.apache.log4j.Logger;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.restassured.test.pojo.Account;
+
 import org.restassured.test.pojo.VerifyAccount;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -18,6 +19,7 @@ public class TwitterApiTest extends TestBase {
     static Logger logger = Logger.getLogger(TwitterApiTest.class.getName());
     Response response;
     ObjectMapper objectMapper = new ObjectMapper();
+    VerifyAccount verifyAccount;
 
     @BeforeClass(alwaysRun = true)
     public void setup() throws IOException {
@@ -47,11 +49,11 @@ public class TwitterApiTest extends TestBase {
         String screenNameExpected = "brightcorona";
         String nameExpected = "Remya Jacob";
         response = given().auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).when()
-                .get(EndpointUrl.VERIFY_ACCOUNTSETTING.getResourcePath()).then().assertThat().statusCode(200).extract().response();
+                .get(EndpointUrl.VERIFY_ACCOUNTSETTING.getResourcePath()).then().extract().response();
         System.out.println("getVerifyaccountCredentials :" + response.asString());
 
             try {
-                VerifyAccount verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
+                 verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
                 Assert.assertEquals(verifyAccount.getScreenName(), screenNameExpected);
                 Assert.assertEquals(verifyAccount.getName(), nameExpected);
             } catch (IOException e) {
@@ -71,7 +73,7 @@ public class TwitterApiTest extends TestBase {
                 .get(EndpointUrl.VERIFY_ACCOUNTSETTING.getResourcePath()).then().assertThat().statusCode(200).extract().response();
         System.out.println("response : " + response.asString());
         try {
-            VerifyAccount verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
+             verifyAccount = objectMapper.readValue(response.getBody().asString(), VerifyAccount.class);
             Assert.assertEquals( verifyAccount.getLang(),"es");
 
             response = given().param("lang", "en").auth()

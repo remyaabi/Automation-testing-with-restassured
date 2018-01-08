@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Integration Suite">
+
+    <test name = "FollowSearchUser">
+
+        <classes>
+            <class name = "org.restassured.test.testscripts.FollowSearchUser" />
+
+        </classes>
+    </test>
+
+    <test name = "TwitterApiTest">
+        <classes>
+
+            <class name = "org.restassured.test.testscripts.TwitterApiTest" />
+        </classes>
+    </test>
+    <test name = "TwitterStatus">
+        <classes>
+
+            <class name = "org.restassured.test.testscripts.TwitterStatus" />
+        </classes>
+    </test>
+
+
+
+</suite>

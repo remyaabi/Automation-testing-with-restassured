@@ -69,17 +69,40 @@ public class TwitterStatus extends TestBase {
        userId=jsonObject.getJSONObject("user").getInt("id");
 
     }
-    @Test(priority =3)
+
+     @Test(priority =4)
     public void  getRecentTweetFavouriteList(){
         //param("user_id", userId).param("screen_name","brightcorona")
-    response=given().auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).
-            when().get(EndpointUrl.GET_RECENTTWEETS.getResourcePath()).then().contentType(ContentType.JSON).and().extract().response();
-       JsonPath jsonpath=response.getBody().jsonPath();
+        response=given().auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).
+                when().get(EndpointUrl.GET_RECENTTWEETS.getResourcePath()).then().contentType(ContentType.JSON).and().extract().response();
+        JsonPath jsonpath=response.getBody().jsonPath();
         String response1=response.asString();
         List urlArrayLength=JsonPath.from(response1).getList("user.entities.url.urls");
         System.out.println("urlArrayLength :" +urlArrayLength.size());
         Assert.assertTrue(urlArrayLength.size()>0);
+    }
+    @Test
+    public void getFriendsIds(){
+        response=given().auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).
+                when().get(EndpointUrl.GET_FRIENDSIDS.getResourcePath()).then().contentType(ContentType.JSON).and().extract().response();
+        System.out.println("getFriendsIds response :" +response.asString());
+        Assert.assertTrue((JsonPath.from(response.asString()).getList("ids").size()) >0);
+    }
+    @Test
+    public void getFriendsList(){
+        response=given().auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).
+                when().get(EndpointUrl.GET_FRIENDSLIST.getResourcePath()).then().contentType(ContentType.JSON).and().extract().response();
+        System.out.println("getFriendsIds response :" +response.asString());
+        Assert.assertTrue((JsonPath.from(response.asString()).getList("users").size()) >0);
+    }
 
+
+    @Test
+    public void standradTweetSearch(){
+        String screen_name="bright_coder";
+        response=given().param("q",screen_name).auth().oauth(CONSUMERKEY, CONSUMERSECRET, ACCESSTOKEN, SECRETTOKEN).when().get(EndpointUrl.STANDRAD_TWEETSEARCH.getResourcePath())
+                .then().contentType(ContentType.JSON).extract().response();
+        System.out.println("standardTweetSearch response :" +response.asString());
     }
 
 }

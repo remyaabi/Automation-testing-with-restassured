@@ -7,7 +7,13 @@ public enum EndpointUrl {
 	GET_FINDGEOLOCATION("1.1/geo/reverse_geocode.json"),
 	POST_STATUS("1.1/statuses/update.json"),
 	GET_STATUS("1.1/statuses/show.json"),
-	GET_RECENTTWEETS("1.1/favorites/list.json");
+	GET_RECENTTWEETS("1.1/favorites/list.json"),
+	POST_STATUSUNRETWEET("1.1/statuses/unretweet/:id.json"),
+	STANDRAD_TWEETSEARCH("1.1/search/tweets.json"),
+	GET_FRIENDSIDS("1.1/friends/ids.json"),
+	GET_FRIENDSLIST("1.1/friends/list.json"),
+	POST_DESTROY_STATUSBYID("1.1/statuses/destroy/:id.json");
+	;
 	String resourcePath;
 
 	EndpointUrl(String resourcePath) {
@@ -17,7 +23,7 @@ public enum EndpointUrl {
 	public String getResourcePath() {
 		return this.resourcePath;
 	}
-public String getResourcePath(String data){
+	public String getResourcePath(String data){
 	return this.resourcePath+data;
 }
 }
